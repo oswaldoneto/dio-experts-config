@@ -10,7 +10,7 @@ spring:
           predicates:
             - Path=/product/**
         - id: shopping-cart
-          uri: http://localhost:8082
+          uri: lb://shopping-cart
           predicates:
             - Path=/cart/**
 eureka:
