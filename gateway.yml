@@ -10,3 +10,14 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/cart/**
+eureka:
+  instance: 
+    hostname: localhost
+    port: 9000
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+    server:
+      wait-time-in-ms-when-sync-empty: 3000 
