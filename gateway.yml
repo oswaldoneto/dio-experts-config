@@ -1,10 +1,12 @@
-gateway:
-  routes:
-    - id: product-catalog
-      uri: http://localhost:8081
-      predicates:
-        - Path=/product/**
-    - id: shopping-cart
-      uri: http://localhost:8082
-      predicates:
-        - Path=/cart/**
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product-catalog
+          uri: http://localhost:8081
+          predicates:
+            - Path=/product/**
+        - id: shopping-cart
+          uri: http://localhost:8082
+          predicates:
+            - Path=/cart/**
