@@ -1,6 +1,10 @@
 spring:
   cloud:
-    gateway:
+    gateway:    
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: product-catalog
           uri: lb://PRODUCT-CATALOG
