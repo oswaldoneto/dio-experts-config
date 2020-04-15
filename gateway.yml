@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: product-catalog
-          uri: http://localhost:8081
+          uri: lb://PRODUCT-CATALOG
           predicates:
             - Path=/product/**
         - id: shopping-cart
