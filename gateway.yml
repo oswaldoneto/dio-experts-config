@@ -6,7 +6,7 @@ spring:
         lowerCaseServiceId: true    
       routes:
         - id: product-catalog
-          uri: lb://product-catalog
+          uri: lb://PRODUCT-CATALOG/
           predicates:
             - Path=/product/**
         - id: shopping-cart
