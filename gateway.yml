@@ -10,6 +10,10 @@ spring:
           uri: lb://shopping-cart
           predicates:
             - Path=/cart/**
+      discovery:
+        locator:
+          enabled: true            
+            
 eureka:
   instance: 
     hostname: localhost
