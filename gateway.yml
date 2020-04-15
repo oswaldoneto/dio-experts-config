@@ -10,9 +10,6 @@ spring:
           uri: lb://shopping-cart:8082
           predicates:
             - Path=/cart/**
-      discovery:
-        locator:
-          enabled: true            
             
 eureka:
   instance: 
