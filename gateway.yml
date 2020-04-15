@@ -23,7 +23,7 @@ spring:
           predicates:
             - Path=/product/**
         - id: shopping-cart
-          uri: lb://shopping-cart
+          uri: lb://PRODUCT-CATALOG
           predicates:
             - Path=/cart/**
             
